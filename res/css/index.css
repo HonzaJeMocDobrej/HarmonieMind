@@ -1,5 +1,8 @@
 :root {
-    --font-one: 'Karla', sans-serif;
+    --font-head: 'Karla', sans-serif;
+    --font-p: 'Merriweather', serif;
+    --light-blue: #a2d1ec;
+    --light-blue-test: #6dbae6;
 }
 
 html, body {
@@ -14,6 +17,10 @@ a {
     color: black;
 }
 
+p {
+    margin: 0;
+}
+
 .content {
     height: 100%;
 }
@@ -22,8 +29,9 @@ header {
     height: 7rem;
     /* background-color: aqua; */
     width: 100%;
-    position: fixed;
+    /* position: fixed; */
     display: flex;
+    top: 0;
     box-shadow: 0px 8px 12px -6px rgba(0,0,0,0.1);
 }
 
@@ -50,8 +58,43 @@ header {
 }
 
 .header-items-cont > a {
-    font-family: var(--font-one);
+    font-family: var(--font-head);
     font-size: 1.2rem;
 }
+
+
+main {
+    height: calc(100% - 7rem);
+}
+
+.main-img-cont {
+    height: 20rem;
+    background-image: url(../img/main-img.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    opacity: 0.75;
+    font-size: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-head);
+    font-weight: 700;
+}
+
+.main-subcont {
+    height: calc(100% - 20rem);
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+}
+
+.main-text {
+    margin-top: 6rem;
+    font-size: 3rem;
+    font-family: var(--font-head);
+    color: var(--light-blue);
+}
+
 
 

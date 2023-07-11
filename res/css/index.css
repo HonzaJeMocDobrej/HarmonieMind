@@ -12,6 +12,7 @@ html, body {
     padding: 0;
     box-sizing: border-box;
     height: 100%;
+    /* width: 100vw; */
 }
 
 a {
@@ -34,6 +35,8 @@ span {
 .content {
     height: 100%;
 }
+
+/* ----------header---------- */
 
 header {
     height: 7rem;
@@ -70,6 +73,10 @@ header {
     position: relative;
 }
 
+.header-items-cont > img {
+    display: none;
+}
+
 .header-items-cont > a::before {
     content: '';
     position: absolute;
@@ -89,12 +96,18 @@ header {
     transform: scaleX(1);
 }
 
+/*------------ main--------- */
+
 main {
     height: calc(100% - 7rem);
+    display: flex;
+    flex-direction: column;
 }
 
 .main-img-cont {
-    height: 20rem;
+    /* height: 20rem;
+    width: 100%; */
+    flex: 7;
     background-image: url(../img/main-img.jpg);
     background-repeat: no-repeat;
     background-position: bottom;
@@ -110,7 +123,8 @@ main {
 }
 
 .main-subcont {
-    height: calc(100% - 20rem);
+    /* height: calc(100% - 24rem); */
+    flex: 10;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -118,7 +132,7 @@ main {
 
 .main-text {
     position: relative;
-    bottom: 5.5rem;
+    bottom: 4.5rem;
     font-size: 3rem;
     font-family: var(--font-p);
     color: var(--light-blue);
@@ -127,17 +141,19 @@ main {
 
 .main-contact-cont {
     display: flex;
+    gap: 20%;
+    /* align-items: center; */
+    justify-content: center;
 }
 
 .main-pe-cont {
     height: 6rem;
-    width: 20%;
+    width: 20rem;
     border-radius: 0.75rem;
     box-shadow: 0px 12px 15px -3px rgba(0,0,0,0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 20%;
 }
 
 .main-pe-cont > img {
@@ -156,17 +172,50 @@ main {
     color: var(--light-blue);
 }
 
+.end {
+    /* height: calc(100% - 100% - 24rem); */
+    display: flex;
+}
+
 footer {
-    height: 2rem;
-    width: 100%;
+    flex: 1;
     /* background-color: rgba(0, 0, 0, 0.3); */
     background-color: var(--light-blue);
-    position: fixed;
-    bottom: 0%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     font-size: .75rem;
     font-family: var(--font-head);
+}
+
+@media (max-width: 1200px) {
+    .header-items-cont > a {
+        display: none;
+    }
+
+    .header-items-cont > img {
+        display: block;
+    }
+}
+
+@media (max-width: 500px) {
+    
+    .main-img-cont {
+        font-size: 3rem;
+        height: 10rem;
+    }
+
+    .main-text {
+        font-size: 3rem;
+        margin-top: 4rem;
+    }
+    
+    .main-pe-cont {
+        width: 35%;
+    }
+
+    .main-pe-cont > a {
+        font-size: .75rem;
+    }
 }

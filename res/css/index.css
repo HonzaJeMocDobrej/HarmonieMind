@@ -36,6 +36,10 @@ span {
     height: 100%;
 }
 
+.lgrey {
+    color: var(--light-grey);
+}
+
 /* ----------header---------- */
 
 header {
@@ -49,6 +53,8 @@ header {
 }
 
 .header-img-cont {
+    display: flex;
+    align-items: center;
     flex: 2;
     margin-left: 10%;
 }
@@ -106,22 +112,26 @@ main {
 }
 
 .main-img-cont {
-    /* height: 20rem;
-    width: 100%; */
     flex: 7;
-    background-image: url(../img/main-img.jpg);
+    background-image: url(../img/sky.png);
     background-repeat: no-repeat;
-    background-position: bottom;
+    background-position: center;
     background-size: cover;
     opacity: 0.75;
     font-size: 5rem;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: var(--font-head);
+    font-family: var(--font-p);
     font-weight: 700;
     color: rgba(0, 0, 0, 0.8);
     z-index: 1;
+}
+
+.main-img-subtitle {
+    font-size: clamp(1rem, 3vw, 6rem);
+    margin-top: 2rem;
 }
 
 .main-subcont {
@@ -134,9 +144,9 @@ main {
 
 .main-text {
     position: relative;
-    bottom: 4.5rem;
-    font-size: 3rem;
-    font-family: var(--font-p);
+    bottom: 2.5rem;
+    font-size: 2.5rem;
+    font-family: var(--font-head);
     color: var(--light-blue);
     text-align: center;
 }
@@ -199,7 +209,10 @@ footer {
 
 @media (max-width: 1200px) {
 
-    
+    .header-img-cont > img {
+        z-index: 3;
+    }
+
     .header-items-cont {
         flex: 2;
         position: fixed;
@@ -224,6 +237,7 @@ footer {
         height: 100%;
         align-items: center;
         margin-right: 10%;
+        z-index: 3;
     }
 }
 
@@ -238,10 +252,14 @@ footer {
         z-index: 2;
         background-color: white;
     }
+
     
+    .header-img-cont > img {
+        height: clamp(75%, 22vw, 90%);
+    }
 
     .header-menu > img {
-        height: clamp(1rem, 6vw, 3rem);
+        height: clamp(2rem, 6vw, 3rem);
     }
 
     main {
@@ -249,9 +267,20 @@ footer {
         top: calc(7rem);
     }
 
+    .main-img-title {
+        font-size: clamp(1.5rem, 12vw,4rem);
+    }
+
+    .main-img-subtitle {
+        font-size: clamp(1rem, 6vw, 2rem);
+        text-wrap: balance;
+        text-align: center;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
     .main-img-cont {
-        font-size: clamp(1.5rem, 8vw,3rem);
-        height: clamp(15rem, 10vw ,20rem);
+        height: clamp(13rem, 10vw ,15rem);
         flex: none;
     }
 
@@ -263,7 +292,7 @@ footer {
         font-size: clamp(.75rem, 8vw, 3rem);
         position: relative;
         top: 0rem;
-        margin-top: 4rem;
+        margin-top: 2rem;
     }
 
     .main-contact-cont {

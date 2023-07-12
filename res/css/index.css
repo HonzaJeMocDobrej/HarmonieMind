@@ -248,7 +248,7 @@ footer {
     }
 
     header {
-        position: fixed;
+        /* position: fixed; */
         z-index: 2;
         background-color: white;
     }

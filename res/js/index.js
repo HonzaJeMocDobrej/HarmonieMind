@@ -2,6 +2,11 @@ let content1 = document.getElementById('focusable1')
 let content2 = document.getElementById('focusable2')
 let phone = document.getElementById('main-p')
 let mail = document.getElementById('main-e')
+let menu = document.getElementById('menu')
+let header = document.getElementById('headerItemsId')
+let children = header.children
+
+let isOpened = false
 
 
 const focus = (text, item, path) => {
@@ -21,3 +26,34 @@ const focus = (text, item, path) => {
 
 focus(phone, content1, "tel:704721304")
 focus(mail, content2, "mailto:testmail@harmoniemind.cz")
+
+menu.onmouseover = () => {
+    menu.style.cursor = "pointer"
+}
+
+menu.onclick = () => {
+    console.log("clicked")
+    for (let i = 0; i < children.length; i++) {
+        if (children[i].tagName === 'A') {
+            isOpened ?
+            children[i].style.display = "none" :
+            children[i].style.display = "block"
+        }
+    }
+    isOpened = !isOpened
+}
+
+window.onresize = () => {
+    if (window.innerWidth > 1200) {
+        for (let i = 0; i < children.length; i++) {
+            children[i].style.display = 'block' 
+        }
+    } 
+
+    if (window.innerWidth < 1200) {
+        for (let i = 0; i < children.length; i++) {
+            children[i].style.display = 'none'
+            isOpened = false
+        }
+    }
+}

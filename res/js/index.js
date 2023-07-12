@@ -4,19 +4,25 @@ let phone = document.getElementById('main-p')
 let mail = document.getElementById('main-e')
 let menu = document.getElementById('menu')
 let header = document.getElementById('headerItemsId')
+let hoverPhone = document.getElementById('hover-phone')
+let hoverMail = document.getElementById('hover-mail')
 let children = header.children
 
 let isOpened = false
 
 
-const focus = (text, item, path) => {
+const focus = (text, item, path, img) => {
     item.onmouseover = () => {
         item.style.cursor = "pointer"
         text.style.color = "#a2d1ec"
+        img.style.filter = "invert(83%) sepia(12%) saturate(906%) hue-rotate(166deg) brightness(95%) contrast(94%)"
+        item.style.transform = 'scale(1.05)'
     }
 
     item.onmouseout = () => {
         text.style.color = "rgb(117, 115, 115)"
+        img.style.filter = "invert(99%) sepia(54%) saturate(1227%) hue-rotate(173deg) brightness(91%) contrast(94%)"
+        item.style.transform = 'scale(1)'
     }
 
     item.onclick = () => {
@@ -24,8 +30,8 @@ const focus = (text, item, path) => {
     }
 }
 
-focus(phone, content1, "tel:704721304")
-focus(mail, content2, "mailto:testmail@harmoniemind.cz")
+focus(phone, content1, "tel:704721304", hoverPhone)
+focus(mail, content2, "mailto:testmail@harmoniemind.cz", hoverMail)
 
 menu.onmouseover = () => {
     menu.style.cursor = "pointer"

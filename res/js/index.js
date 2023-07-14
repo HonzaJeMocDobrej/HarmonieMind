@@ -14,14 +14,14 @@ let isOpened = false
 const focus = (text, item, path, img) => {
     item.onmouseover = () => {
         item.style.cursor = "pointer"
-        text.style.color = "#a2d1ec"
-        img.style.filter = "invert(83%) sepia(12%) saturate(906%) hue-rotate(166deg) brightness(95%) contrast(94%)"
+        text.style.color = "#96b7de"
+        img.style.filter = "invert(80%) sepia(5%) saturate(2772%) hue-rotate(183deg) brightness(89%) contrast(96%)"
         item.style.transform = 'scale(1.05)'
     }
 
     item.onmouseout = () => {
-        text.style.color = "rgb(117, 115, 115)"
-        img.style.filter = "invert(99%) sepia(54%) saturate(1227%) hue-rotate(173deg) brightness(91%) contrast(94%)"
+        text.style.color = "#a2d1ec"
+        img.style.filter = "invert(83%) sepia(12%) saturate(906%) hue-rotate(166deg) brightness(95%) contrast(94%)"
         item.style.transform = 'scale(1)'
     }
 

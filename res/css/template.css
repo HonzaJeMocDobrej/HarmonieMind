@@ -5,7 +5,7 @@
     --font-p: 'Dancing Script', cursive;
     --light-blue: #a2d1ec;
     --light-grey: #eceded;
-    --light-grey-icons: #c8d7e3;
+    --darker-blue: #96b7de;
     --lighter-blue: #ade1f5;
     --light-black: rgba(0, 0, 0, 0.8);
     --grey: rgb(117, 115, 115);
@@ -51,6 +51,22 @@ span {
 
 .lgrey {
     color: var(--light-grey);
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-center {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+}
+
+.margin-bottom6 {
+    margin-bottom: 6rem;
 }
 
 /* ----------header---------- */
@@ -116,65 +132,9 @@ header {
 }
 
 
-/* ----------main---------- */
-
 main {
     margin-left: 5rem;
     margin-right: 5rem;
-}
-
-.qcont {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5rem;
-    min-height: fit-content;
-    margin-top: 12rem;
-    max-width: 100%;
-    box-shadow: 0px -2px 15px 16px rgba(0,0,0,0.1);
-}
-
-.qcont > img {
-    height: clamp(12rem, 25vw, 20rem);
-}
-
-.quotes {
-    font-family: var(--font-p);
-    color: var(--light-blue);
-    font-size: clamp(2rem, 4vw, 6rem);
-    text-wrap: balance;
-    width: 50%;
-    text-align: center;
-
-}
-
-.pdiv {
-    margin-top: 8rem;
-}
-
-.pdiv > h1 {
-    color: var(--light-black);
-    font-family: var(--font-p);
-    font-size: clamp(2.7rem, 4vw, 6rem);
-    text-decoration: overline;
-}
-
-.pdiv > p {
-    padding-top: 2rem;
-    font-size: clamp(1.25rem, 1.5vw, 3rem);
-    text-wrap: balance
-}
-
-.last-child {
-    background-color: var(--lighter-blue);
-    color: white;
-}
-
-
-.pdiv > h3 {
-    font-family: var(--font-p);
-    color: var(--light-blue);
-    font-size: clamp(2.7rem, 4vw, 6rem);
 }
 
 footer {
@@ -192,7 +152,181 @@ footer > p {
     color: white;
 }
 
+/* ----------onas---------- */
 
+
+.onas-qcont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    height: 15rem;
+    margin-top: 12rem;
+    max-width: 100%;
+    box-shadow: 0px -2px 15px 16px rgba(0,0,0,0.1);
+}
+
+.onas-qcont > img {
+    /* height: clamp(12rem, 25vw, 20rem); */
+    height: 85%;
+}
+
+.onas-quotes {
+    font-family: var(--font-p);
+    color: var(--light-blue);
+    font-size: clamp(2rem, 4.5vw, 6rem);
+    text-wrap: balance;
+    width: 50%;
+    text-align: center;
+
+}
+
+.onas-pdiv {
+    margin-top: 8rem;
+}
+
+.onas-pdiv > h1 {
+    color: var(--light-black);
+    font-family: var(--font-p);
+    font-size: clamp(1.7rem, 2vw, 4rem);
+    text-decoration: overline;
+}
+
+.onas-pdiv > p {
+    padding-top: 2rem;
+    font-size: clamp(1.25rem, 1.5vw, 3rem);
+    text-wrap: balance
+}
+
+.onas-last-child {
+    background-color: var(--lighter-blue);
+    color: white;
+}
+
+
+.onas-pdiv > h3 {
+    font-family: var(--font-p);
+    color: var(--light-blue);
+    font-size: clamp(1.7rem, 2vw, 4rem);
+}
+
+
+/* ----------kontakt---------- */
+
+
+.kont-imgheadline-cont {
+    margin-top: 12rem;
+}
+
+.kont-headline {
+    color: var(--light-blue);
+    font-family: var(--font-p);
+    font-size: clamp(1.5rem, 3vw, 4rem);
+    text-align: center;
+}
+
+.kont-img-cont > img {
+    height: clamp(8rem, 12vw, 15rem);
+    border-radius: 15px;
+    border: solid 5px var(--darker-blue);
+}
+
+.kont-img-cont {
+    gap: 4rem;
+}
+
+.kont-mdt-cont {
+    background-color: #96b7de;
+    /* background-color: var(--light-blue); */
+    border-radius: 15px;
+    margin-top: 6rem;
+    min-height: 22rem;
+}
+
+.kont-tel {
+    padding-top: 5rem;
+}
+
+.kont-mdt-cont > h1, .kont-mdt-cont > div > div > h3{
+    font-family: var(--font-head);
+    color: white;
+    text-align: center;
+}
+
+.kont-mdt-cont > div > div > h5  {
+    font-family: var(--font-head);
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    font-weight: 400;
+}
+
+.kont-mdt-cont > div > div > h3  {
+    font-size: clamp(1.2rem, 1.5vw, 2rem);
+}
+
+.kont-mdt-img {
+    filter: invert(99%) sepia(20%) saturate(0%) hue-rotate(258deg) brightness(111%) contrast(100%);
+}
+
+.kont-mdt-cont > div > div > a {
+    color: white;
+    font-family: var(--font-head);
+    font-size: clamp(.9rem, 1.5vw, 2rem);
+    font-weight: 700;
+    text-decoration: underline var(--light-blue) 1.5px;
+    transform: scale(1);
+    transition: .75s;
+}
+
+.kont-a-focus:hover {
+    color: var(--light-blue);
+    transform: scale(1.05);
+}
+
+.kont-mdt-cont > div {
+    gap: clamp(3rem, 10vw, 10rem);
+}
+
+.kont-items-cont {
+    margin-bottom: 5rem;
+}
+
+.kont-mdt-cont > div > div {
+    margin-top: 3rem;
+    /* background-color: var(--light-blue); */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* height: clamp(8rem, 10vw, 12rem); */
+    width: clamp(5rem, 20vw, 15rem);
+    text-align: center;
+    /* margin-top: 4rem; */
+}
+
+.kont-mdt-cont  > h1 {
+    margin-top: 3rem;
+    font-size: clamp(2rem, 3vw, 4rem);
+    line-height: 50px;
+    text-decoration: underline 3px var(--light-blue);
+}
+
+.kont-icon-cont {
+    background-color: var(--light-blue);
+    min-height: 5rem;
+    min-width: 5rem;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.kont-icon-cont > img {
+    height: 3rem;
+}
+
+.kont-footer {
+    margin-top: 6rem;
+}
 
 @media (max-width: 1200px) {
 
@@ -235,6 +369,32 @@ footer > p {
     }
 }
 
+@media (max-width: 1000px) {
+    .kont-items-cont {
+        display: grid;
+        width: 100%;
+    }
+
+    .kont-items-cont > div {
+        width: 100%
+    };
+    
+
+    .margin-bottom6 {
+        margin-bottom: 0;
+    }
+
+    .kont-tel, .kont-mail {
+        padding-top: 0;
+        margin-bottom: 0;
+    }
+
+    .kont-tel > h5 {
+        width: clamp(5rem,180px,10rem);
+    }
+    
+}
+
 @media (max-width: 550px) {
 
     main {
@@ -242,22 +402,36 @@ footer > p {
         margin-right: 2rem;
     }
 
-    .qcont {
+/* ----------onas---------- */
+
+    .onas-qcont {
         flex-direction: column;
         gap: 2rem;
         box-shadow: none;
     }
 
-    .qcont > p {
+    .onas-qcont > p {
         width: 100%;
     }
+
+    .onas-qcont > img {
+        height: clamp(9rem, 10vw, 15rem);
+    }
     
-    .pdiv > p {
+    .onas-pdiv > p {
         text-align: center;
     }
 
-    .pdiv > h1, .pdiv > h3 {
+    .onas-pdiv > h1, .onas-pdiv > h3 {
         display: flex;
         justify-content: center;
+    }
+
+    /* ----------onas---------- */
+
+    .kont-img-cont {
+        /* display: block; */
+        flex-direction: column;
+        gap: 2rem;
     }
 }

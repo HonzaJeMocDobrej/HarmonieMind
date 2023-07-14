@@ -178,13 +178,15 @@ main {
 
 .main-pe-cont > img {
     height: 4rem;
-    filter: invert(99%) sepia(54%) saturate(1227%) hue-rotate(173deg) brightness(91%) contrast(94%);
-    /* filter: invert(83%) sepia(12%) saturate(906%) hue-rotate(166deg) brightness(95%) contrast(94%); */
+    /* filter: invert(99%) sepia(54%) saturate(1227%) hue-rotate(173deg) brightness(91%) contrast(94%); */
+    /* filter: invert(80%) sepia(5%) saturate(2772%) hue-rotate(183deg) brightness(89%) contrast(96%); */
+    filter: invert(83%) sepia(12%) saturate(906%) hue-rotate(166deg) brightness(95%) contrast(94%);
     transition: filter .5s;
 }
 
 .main-pe-cont > a {
     /* color: #c8d7e3; */
+    color: var(--light-blue);
     font-family: var(--font-head);
     font-weight: 500;
     transition: color .5s;

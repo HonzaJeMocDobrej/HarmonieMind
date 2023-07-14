@@ -3,6 +3,7 @@
 :root {
     --font-head: 'Karla', sans-serif;
     --font-p: 'Dancing Script', cursive;
+    --textshadow-black: 0px 0px 5px rgba(0, 0, 0, 1);
     --light-blue: #a2d1ec;
     --light-grey: #eceded;
     --darker-blue: #96b7de;
@@ -29,6 +30,7 @@ p {
     margin: 0;
     color: var(--grey);
     font-family: var(--font-head);
+    text-wrap: balance;
 }
 
 span {
@@ -47,6 +49,10 @@ span {
 .underline-b {
     border-bottom: solid 5px var(--light-blue);
     padding-bottom: -5px;
+}
+
+.bold {
+    font-weight: 700;
 }
 
 .lgrey {
@@ -69,6 +75,43 @@ span {
     margin-bottom: 6rem;
 }
 
+.write {
+    font-family: var(--font-p);
+    color: var(--light-blue);
+
+}
+
+.type {
+    font-family: var(--font-head);
+    color: var(--light-black);
+}
+
+.headline {
+    font-size: clamp(2rem, 4.5vw, 6rem);
+    font-weight: 700;
+}
+
+.subheadline {
+    font-size: clamp(1rem, 2vw, 3rem);
+    font-weight: 500;
+}
+
+.ptext {
+    font-family: var(--font-head);
+    font-size: clamp(.9rem, 1.2vw, 2rem);
+}
+
+.anim-a {
+    transform: scale(1);
+    transition: 0.5s;
+}
+
+.anim-a:hover {
+    transform: scale(0.95);
+    color: var(--light-blue);
+}
+
+
 /* ----------header---------- */
 
 header {
@@ -80,6 +123,7 @@ header {
     top: 0;
     box-shadow: 0px 8px 12px -6px rgba(0,0,0,0.1);
     background-color: white;
+    z-index: 1;
 }
 
 .header-img-cont {
@@ -203,7 +247,7 @@ footer > p {
 .onas-pdiv > p {
     padding-top: 2rem;
     font-size: clamp(1.25rem, 1.5vw, 3rem);
-    text-wrap: balance
+    text-wrap: balance;
 }
 
 .onas-pdiv > h3 {
@@ -277,12 +321,12 @@ footer > p {
     font-weight: 700;
     text-decoration: underline var(--light-blue) 1.5px;
     transform: scale(1);
-    transition: .75s;
+    transition: .5s;
 }
 
 .kont-a-focus:hover {
     color: var(--light-blue);
-    transform: scale(1.05);
+    transform: scale(0.95);
 }
 
 .kont-mdt-cont > div {
@@ -327,6 +371,101 @@ footer > p {
 }
 
 .kont-footer {
+    margin-top: 6rem;
+}
+
+
+/* ----------konzultace---------- */
+
+
+.konz-headline {
+    margin-top: 10rem;
+}
+
+.konz-subheadline {
+    margin-top: 3rem;
+}
+
+.konz-headline-block {
+    flex-direction: column;
+}
+
+.konz-info {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.konz-help-cont {
+    margin-top: 7rem;
+    background-color: var(--darker-blue);
+    border-radius: 1.5rem 1.5rem 0 0;
+    height: fit-content;
+}
+
+.konz-help-headline {
+    color: white;
+    text-shadow: var(--textshadow-black);
+    margin-left: 3rem;
+    padding-top: 5rem;
+}
+
+.konz-help-cont > ul {
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+}
+
+.konz-help-cont > ul > li {
+    color: white;
+    list-style-type: disc;
+    font-weight: 500;
+    font-size: clamp(1.1rem, 1.7vw, 3.5rem);
+    margin-left: 5rem;
+    padding-top: 0.5rem;
+}
+
+.konz-pay-cont {
+    margin-top: 5rem;
+    width: clamp(20rem,50%, 65%);
+    min-height: 12rem;
+    /* background-color: aqua; */
+    border: solid 5px var(--light-blue);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    transition: .75s;
+    transform: scale(1);
+    cursor: default;
+}
+
+.konz-pay-cont:hover {
+    transform: scale(1.05);
+}
+
+.konz-pay-cont > h3 {
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+.konz-pay-cont > p {
+    margin-top: 1rem;
+}
+
+.konz-price {
+    font-size: clamp(2rem, 3.5vw, 5rem);
+    color: var(--light-black);
+    font-weight: 700;
+    padding: 0;
+    margin: 0;
+}
+
+.konz-end-headline {
+    margin-top: 2rem;
+    font-size: clamp(2rem, 3vw, 4rem);
+    text-align: center;
+}
+
+.konz-footer {
     margin-top: 6rem;
 }
 
@@ -395,6 +534,17 @@ footer > p {
         width: clamp(5rem,180px,10rem);
     }
     
+}
+
+@media (max-width: 850px) {
+    .konz-help-headline {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .konz-help-cont > ul > li {
+        margin-left: 1.5rem;
+    }
 }
 
 @media (max-width: 550px) {

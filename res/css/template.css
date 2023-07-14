@@ -164,21 +164,29 @@ footer > p {
     margin-top: 12rem;
     max-width: 100%;
     box-shadow: 0px -2px 15px 16px rgba(0,0,0,0.1);
+    background-image: url(../img/sky.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* opacity: 0.75; */
 }
 
 .onas-qcont > img {
     /* height: clamp(12rem, 25vw, 20rem); */
     height: 85%;
+    opacity: 1;
 }
 
 .onas-quotes {
     font-family: var(--font-p);
-    color: var(--light-blue);
+    color: white;
+    text-shadow: 0px 0px 5px rgba(162, 209, 236, 1);
     font-size: clamp(2rem, 4.5vw, 6rem);
     text-wrap: balance;
     width: 50%;
     text-align: center;
-
+    opacity: 1;
+    
 }
 
 .onas-pdiv {
@@ -197,12 +205,6 @@ footer > p {
     font-size: clamp(1.25rem, 1.5vw, 3rem);
     text-wrap: balance
 }
-
-.onas-last-child {
-    background-color: var(--lighter-blue);
-    color: white;
-}
-
 
 .onas-pdiv > h3 {
     font-family: var(--font-p);
@@ -408,6 +410,12 @@ footer > p {
         flex-direction: column;
         gap: 2rem;
         box-shadow: none;
+        background: transparent;
+    }
+
+    .onas-quotes {
+        text-shadow: none;
+        color: var(--light-blue);
     }
 
     .onas-qcont > p {

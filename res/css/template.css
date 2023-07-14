@@ -421,6 +421,7 @@ footer > p {
     font-size: clamp(1.1rem, 1.7vw, 3.5rem);
     margin-left: 5rem;
     padding-top: 0.5rem;
+    margin-right: 5rem;
 }
 
 .konz-pay-cont {
@@ -544,6 +545,7 @@ footer > p {
 
     .konz-help-cont > ul > li {
         margin-left: 1.5rem;
+        margin-right: 2.5rem;
     }
 }
 

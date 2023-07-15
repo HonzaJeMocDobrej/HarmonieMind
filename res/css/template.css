@@ -503,11 +503,13 @@ footer > p {
     margin-top: 6rem;
 }
 
+
+/* ----------meditace---------- */
+
+
 .med-headline {
     margin-top: 10rem;
 }
-
-/* ----------meditace---------- */
 
 .med-lay-cont {
     gap: 5%;
@@ -523,11 +525,11 @@ footer > p {
 }
 
 .med-cont-1 {
-    min-height: 12rem;
+    min-height: 20rem;
 }
 
 .med-cont-2 {
-    min-height: 20rem;
+    min-height: 25rem;
 }
 
 .med-p-cont > img {
@@ -557,6 +559,84 @@ hr {
 
 .med-footer {
     margin-top: 7rem;
+}
+
+
+/* ----------Seminare---------- */
+
+
+.sem-headline {
+    margin-top: 10rem;
+}
+
+.sem-subheadline {
+    text-align: center;
+}
+
+.sem-img {
+    height: clamp(10rem, 15vw, 25rem);
+    margin-top: 4rem;
+}
+
+.sem-p {
+    margin-left: 15%;
+    margin-right: 15%;
+    font-size: clamp(0.9rem, 1.2vw, 2rem);
+    text-align: center;
+}
+
+.sem-footer {
+    margin-top: 5rem;
+}
+
+
+/* ----------Clanky---------- */
+
+
+.cla-hb {
+    min-height: 100%;
+}
+
+.cla-main{
+    margin-top: 10rem;
+    margin-left: 0;
+    margin-right: 0;
+    min-height: calc(100vh - 15rem);
+}
+
+.cla-cont {
+    margin-top: 4rem;
+    min-height: 50rem;
+    background-color: var(--light-grey);
+    max-width: 100%;
+    box-shadow: 0px -2px 15px 16px rgba(0,0,0,0.1);
+}
+
+.cla-cont > h1 {
+    padding-top: 5rem;
+}
+
+.cla-footer {
+    height: 2rem;
+    margin-top: 3rem;
+}
+
+.img-lay-cont  {
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+
+}
+
+.img-lay-cont > p {
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+
+.img-lay-cont > img{
+    height: clamp(20rem, 25vw, 30rem);
+    width: clamp(20rem, 25vw, 30rem);
 }
 
 @media (max-width: 1200px) {

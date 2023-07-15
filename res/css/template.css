@@ -124,6 +124,7 @@ span {
     transition: .75s;
     transform: scale(1);
     cursor: default;
+    box-shadow: 0px -2px 15px 16px rgba(0,0,0,0.1);
 }
 
 .pay-cont:hover {
@@ -247,7 +248,7 @@ footer > p {
     max-width: 100%;
     box-shadow: 0px -2px 15px 16px rgba(0,0,0,0.1);
     background-image: url(../img/sky.png);
-    background-position: top;
+    background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
     /* opacity: 0.75; */
@@ -255,7 +256,7 @@ footer > p {
 
 .onas-qcont > img {
     /* height: clamp(12rem, 25vw, 20rem); */
-    height: 85%;
+    height: 105%;
     opacity: 1;
 }
 
@@ -286,6 +287,7 @@ footer > p {
     padding-top: 2rem;
     font-size: clamp(1.25rem, 1.5vw, 3rem);
     text-wrap: balance;
+    /* text-align: center; */
 }
 
 .onas-pdiv > h3 {
@@ -414,6 +416,15 @@ footer > p {
 
 /* ----------konzultace---------- */
 
+.konz-main {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.konz-margin {
+    margin-left: 5%;
+    margin-right: 5%;
+}
 
 .konz-headline {
     margin-top: 10rem;
@@ -431,8 +442,24 @@ footer > p {
 }
 
 .konz-info {
-    margin-top: 1rem;
     text-align: center;
+    color: white;
+}
+
+.konz-info-cont {
+    gap: 2rem;
+    margin-top: 6rem;
+    background-image: url(../img/woman-blue.png);
+    background-position: center;
+    background-size: cover;
+    min-height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5rem;
+    padding-top: 5rem;
 }
 
 .konz-help-cont {
@@ -440,6 +467,7 @@ footer > p {
     background-color: var(--darker-blue);
     border-radius: 1.5rem 1.5rem 0 0;
     height: fit-content;
+    box-shadow: 0px -2px 15px 16px rgba(0,0,0,0.1);
 }
 
 .konz-help-headline {
@@ -595,7 +623,7 @@ hr {
     .kont-tel > h5 {
         width: clamp(5rem,180px,10rem);
     }
-    
+
 }
 
 @media (max-width: 850px) {

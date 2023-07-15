@@ -13,7 +13,7 @@ html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    height: 100%;
+    min-height: 100%;
     max-width: 100%;
     /* width: 100vw; */
 }
@@ -108,13 +108,13 @@ header {
 /*------------ main--------- */
 
 main {
-    height: calc(100% - 7rem);
+    min-height: 100%;
     display: flex;
     flex-direction: column;
 }
 
 .main-img-cont {
-    flex: 7;
+    height: 17rem;
     background-image: url(../img/sky.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -142,7 +142,7 @@ main {
 }
 
 .main-subcont {
-    /* height: calc(100% - 24rem); */
+    margin-top: 2rem;
     flex: 10;
     display: flex;
     justify-content: center;
@@ -150,8 +150,6 @@ main {
 }
 
 .main-text {
-    position: relative;
-    bottom: 2.5rem;
     font-size: 2.5rem;
     font-family: var(--font-p);
     color: var(--light-blue);
@@ -163,6 +161,7 @@ main {
     gap: 20%;
     /* align-items: center; */
     justify-content: center;
+    margin-top: 5rem;
 }
 
 .main-pe-cont {
@@ -202,7 +201,6 @@ main {
 }
 
 footer {
-    flex: 1;
     /* background-color: rgba(0, 0, 0, 0.3); */
     background-color: var(--light-blue);
     display: flex;
@@ -210,7 +208,9 @@ footer {
     justify-content: center;
     color: white;
     font-size: .75rem;
+    margin-top: 5rem;
     font-family: var(--font-head);
+    min-height: 2rem;
 }
 
 @media (min-width: 1200px) {
@@ -315,7 +315,7 @@ footer {
         font-size: clamp(.75rem, 8vw, 3rem);
         position: relative;
         top: 0rem;
-        margin-top: 2rem;
+        margin-top: 1rem;
     }
 
     .main-contact-cont {
@@ -323,6 +323,7 @@ footer {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-top: 2rem;
         gap: 2rem;
     }
     
@@ -336,6 +337,6 @@ footer {
     }
 
     footer {
-        flex: none;
+        margin-top: 3rem;
     }
 }

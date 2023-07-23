@@ -671,6 +671,39 @@ hr {
 
 /* ----------Clanky---------- */
 
+.cla-hb {
+    min-height: 100vh;
+}
+
+.cla-main-real {
+    min-height: calc(100vh - 9rem);
+    margin-top: 7rem;
+}
+
+.cla-hadline-real {
+    padding-top: 2rem;
+}
+
+.cla-a-cont-real {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.cla-a-cont-real > a {
+    margin-top: .5rem;
+    font-size: clamp(1.2rem, 1.5vw, 3rem);
+    font-family: var(--font-head);
+    text-decoration: underline var(--light-blue) 1px;
+    transform: scale(1);
+    transition: .5s;
+}
+
+.cla-a-cont-real > a:hover {
+    transform: scale(.95);
+    color: var(--light-blue);
+}
 
 .cla-hb {
     min-height: 100%;
@@ -683,40 +716,88 @@ hr {
     min-height: calc(100vh - 5rem);
 }
 
+.cla-cont > p {
+    text-align: justify;
+    margin-top: 1rem;
+    font-size: clamp(.9rem, 1.2vw, 2rem);
+}
+
+.cla-cont > ul > li {
+    list-style-type: decimal;
+    color: var(--grey);
+    font-family: var(--font-head);
+    margin-top: .5rem;
+    font-size: clamp(.9rem, 1.2vw, 2rem);
+}
+
+.cla-cont > ul > li::marker {
+    color: var(--light-blue);
+}
+
+.cla-footer {
+    margin-top: 4rem;
+}
+
 .cla-cont {
     margin-top: 4rem;
     min-height: 50rem;
     background-color: var(--light-grey);
     max-width: 100%;
     box-shadow: 0px -2px 15px 16px rgba(0,0,0,0.1);
-}
-
-.cla-cont > h1 {
-    padding-top: 5rem;
-}
-
-.cla-footer {
-    height: 2rem;
-    margin-top: 3rem;
-}
-
-.img-lay-cont  {
-    display: flex;
-    align-items: center;
     padding-left: 5%;
     padding-right: 5%;
-
 }
 
-.img-lay-cont > p {
-    padding-left: 10rem;
-    padding-right: 10rem;
+.cla-start {
+    padding-top: 2rem;
 }
 
-.img-lay-cont > img{
-    height: clamp(20rem, 25vw, 30rem);
-    width: clamp(20rem, 25vw, 30rem);
+.cla-start > img {
+    height: clamp(2rem, 5vw, 6rem);
+    transition: .5s;
+    filter: invert(44%) sepia(0%) saturate(1522%) hue-rotate(224deg) brightness(101%) contrast(85%);
+    transform: scale(1);
 }
+
+.cla-start > img:hover {
+    filter: invert(83%) sepia(12%) saturate(906%) hue-rotate(166deg) brightness(95%) contrast(94%);
+    transform: scale(.95);
+    cursor: pointer;
+}
+
+.cla-martopnul {
+    margin-top: 0;
+}
+
+.cla-marbotnul {
+    margin-bottom: 0;
+}
+
+.cla-padtop2 {
+    padding-top: 1rem;
+}
+
+.cla-headline {
+    font-family: var(--font-p);
+    font-size: clamp(1.2rem, 2vw, 3.5rem);
+    color: var(--light-blue);
+}
+
+.cla-ul {
+    padding-left: 5%;
+}
+
+.cla-inv > p, .cla-inv > a {
+    font-size: clamp(.9rem, 1.2vw, 2rem);
+    margin-top: 1rem;
+    font-style: italic;
+}
+
+.cla-inv {
+    margin-top: 5rem;
+    padding-bottom: 5rem;
+}
+
 
 @media (max-width: 1200px) {
 

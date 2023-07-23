@@ -284,13 +284,22 @@ footer > p {
 }
 
 .onas-pdiv > p {
-    padding-top: 2rem;
+    text-align: justify;
     font-size: clamp(1.25rem, 1.5vw, 3rem);
     text-wrap: balance;
-    /* text-align: center; */
 }
 
+.onas-pdiv-fchild {
+    padding-top: 0;
+}
+
+.onas-pdiv-ochild {
+    padding-top: 2rem;
+} 
+
 .onas-pdiv > h3 {
+    margin-top: 1.23rem;
+    margin-bottom: 1.23rem;
     font-family: var(--font-p);
     color: var(--light-blue);
     font-size: clamp(1.7rem, 2vw, 4rem);
@@ -414,56 +423,92 @@ footer > p {
     margin-top: 6rem;
 }
 
+.kont-kde {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+}
+
+.kont-kde-img {
+    width: clamp(60rem,75vw,90rem);
+}
+
+
 /* ----------konzultace---------- */
+
+.konz-h1 {
+    margin-top: 10rem;
+}
 
 .konz-main {
     margin-left: 0;
     margin-right: 0;
 }
 
-.konz-margin {
+.margin-lr {
     margin-left: 5%;
     margin-right: 5%;
 }
 
 .konz-headline {
-    margin-top: 10rem;
     text-align: center;
+    font-size: clamp(1.5rem, 3.5vw, 5rem);
 }
 
 .konz-subheadline {
     margin-top: 3rem;
     text-align: center;
+    font-size: clamp(.8rem, 1.5vw, 2.5rem);
 }
 
 .konz-headline-block {
     flex-direction: column;
     text-align: center;
+    font-size: clamp(.8rem, 1.5vw, 2.5rem);
+}
+
+.konz-headline-block > a {
+    display: flex;
+    margin-top: 1rem;
+    align-items: center;
+    /* justify-content: center; */
+    font-size: clamp(.9rem, 1.8vw, 2.5rem);
+}
+
+.konz-headline-block > a::before {
+    content: url(../img/IcBaselineAdsClick.svg);
+    height: 100%;
+    filter: invert(43%) sepia(0%) saturate(56%) hue-rotate(138deg) brightness(103%) contrast(79%);
+    transition: .5s;
+}
+
+.konz-headline-block > a:hover::before {
+    filter: invert(83%) sepia(12%) saturate(906%) hue-rotate(166deg) brightness(95%) contrast(94%);
+}
+
+.konz-pinfo {
+    margin-top: 4rem;
 }
 
 .konz-info {
-    text-align: center;
-    color: white;
+    text-align: justify;
+    margin-top: 1rem;
+    /* color: rgb(255, 255, 255); */
 }
 
 .konz-info-cont {
-    gap: 2rem;
-    margin-top: 6rem;
-    background-image: url(../img/woman-blue.png);
+    gap: 1rem;
+    margin-top: 7rem;
+    background-image: url(../img/flowers2.png);
+    /* background-image: url(../img/woman-blue.png); */
     background-position: center;
     background-size: cover;
-    min-height: fit-content;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-bottom: 5rem;
-    padding-top: 5rem;
+    height: clamp(15rem, 25vw, 30rem);
 }
 
 .konz-help-cont {
-    margin-top: 7rem;
+    margin-top: 4rem;
     background-color: var(--darker-blue);
     border-radius: 1.5rem 1.5rem 0 0;
     height: fit-content;
@@ -492,6 +537,11 @@ footer > p {
     margin-right: 5rem;
 }
 
+.konz-help-cont > ul > li::marker {
+    content: '➢   ';
+    color: var(--grey);
+}
+
 
 .konz-end-headline {
     margin-top: 2rem;
@@ -507,12 +557,31 @@ footer > p {
 /* ----------meditace---------- */
 
 
+.med-main {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.med-img-cont {
+    margin-top: 7rem;
+    background-image: url(../img/flowers3.jpg);
+    /* background-image: url(../img/woman-blue.png); */
+    background-position: center;
+    background-size: cover;
+    height: clamp(15rem, 25vw, 30rem);
+}
+
 .med-headline {
-    margin-top: 10rem;
+    margin-top: 5rem;
+    font-size: clamp(1.5rem, 3.5vw, 5rem);
+}
+
+.med-second-headline {
+    font-size: clamp(1.5rem, 3.5vw, 5rem);
 }
 
 .med-lay-cont {
-    gap: 5%;
+    /* gap: 5%; */
     margin-top: 8rem;
 }
 
@@ -522,6 +591,16 @@ footer > p {
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin-right: 3%;
+    margin-left: 3%;
+}
+
+.med-cont-first {
+    margin-left: 5%;
+}
+
+.med-cont-last {
+    margin-right: 5%;
 }
 
 .med-cont-1 {
@@ -598,10 +677,10 @@ hr {
 }
 
 .cla-main{
-    margin-top: 10rem;
+    margin-top: 7rem;
     margin-left: 0;
     margin-right: 0;
-    min-height: calc(100vh - 15rem);
+    min-height: calc(100vh - 5rem);
 }
 
 .cla-cont {
@@ -702,6 +781,14 @@ hr {
 
     .kont-tel > h5 {
         width: clamp(5rem,180px,10rem);
+    }
+
+    .kont-kde {
+        gap: 2rem;
+    }
+
+    .kont-kde-img {
+        width: 100%;
     }
 
 }

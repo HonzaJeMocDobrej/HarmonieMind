@@ -518,6 +518,7 @@ footer > p {
 .konz-help-headline {
     color: white;
     text-shadow: var(--textshadow-black);
+    font-size: clamp(1.5rem, 3.5vw, 5rem);
     margin-left: 3rem;
     padding-top: 5rem;
 }
@@ -531,7 +532,7 @@ footer > p {
     color: white;
     list-style-type: disc;
     font-weight: 500;
-    font-size: clamp(1.1rem, 1.7vw, 3.5rem);
+    font-size: clamp(.9rem, 1.2vw, 2rem);
     margin-left: 5rem;
     padding-top: 0.5rem;
     margin-right: 5rem;
@@ -545,7 +546,7 @@ footer > p {
 
 .konz-end-headline {
     margin-top: 2rem;
-    font-size: clamp(2rem, 3vw, 4rem);
+    font-size: clamp(1.5rem, 3.5vw, 5rem);
     text-align: center;
 }
 
@@ -722,6 +723,10 @@ hr {
     font-size: clamp(.9rem, 1.2vw, 2rem);
 }
 
+.cla-cont > ul {
+    text-align: justify;
+}
+
 .cla-cont > ul > li {
     list-style-type: decimal;
     color: var(--grey);
@@ -753,7 +758,7 @@ hr {
 }
 
 .cla-start > img {
-    height: clamp(2rem, 5vw, 6rem);
+    height: clamp(1rem, 4vw, 6rem);
     transition: .5s;
     filter: invert(44%) sepia(0%) saturate(1522%) hue-rotate(224deg) brightness(101%) contrast(85%);
     transform: scale(1);
@@ -796,6 +801,10 @@ hr {
 .cla-inv {
     margin-top: 5rem;
     padding-bottom: 5rem;
+}
+
+.cla-underline {
+    text-decoration: underline var(--darker-blue) 2px;
 }
 
 

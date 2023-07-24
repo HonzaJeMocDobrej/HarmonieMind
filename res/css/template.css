@@ -72,7 +72,7 @@ span {
 }
 
 .margin-bottom6 {
-    margin-bottom: 6rem;
+    margin-bottom: 2rem;
 }
 
 .write {
@@ -255,8 +255,7 @@ footer > p {
 }
 
 .onas-qcont > img {
-    /* height: clamp(12rem, 25vw, 20rem); */
-    height: 105%;
+    height: clamp(12rem, 25vw, 20rem);
     opacity: 1;
 }
 
@@ -264,7 +263,7 @@ footer > p {
     font-family: var(--font-p);
     color: white;
     text-shadow: 0px 0px 5px rgba(162, 209, 236, 1);
-    font-size: clamp(2rem, 4.5vw, 6rem);
+    font-size: clamp(1.8rem, 4vw, 5.5rem);
     text-wrap: balance;
     width: 50%;
     text-align: center;
@@ -273,7 +272,7 @@ footer > p {
 }
 
 .onas-pdiv {
-    margin-top: 8rem;
+    margin-top: 4rem;
 }
 
 .onas-pdiv > h1 {
@@ -310,7 +309,7 @@ footer > p {
 
 
 .kont-imgheadline-cont {
-    margin-top: 12rem;
+    margin-top: 8.5rem;
 }
 
 .kont-headline {
@@ -338,9 +337,6 @@ footer > p {
     min-height: 22rem;
 }
 
-.kont-tel {
-    padding-top: 5rem;
-}
 
 .kont-mdt-cont > h1, .kont-mdt-cont > div > div > h3{
     font-family: var(--font-head);
@@ -379,15 +375,15 @@ footer > p {
 }
 
 .kont-mdt-cont > div {
-    gap: clamp(3rem, 10vw, 10rem);
+    gap: clamp(1rem, 8vw, 12rem);
 }
 
 .kont-items-cont {
-    margin-bottom: 5rem;
+    display: flex;
+    
 }
 
 .kont-mdt-cont > div > div {
-    margin-top: 3rem;
     /* background-color: var(--light-blue); */
     display: flex;
     align-items: center;
@@ -428,6 +424,14 @@ footer > p {
     flex-direction: column;
     align-items: center;
     gap: 5rem;
+}
+
+.kont-doba {
+    margin-top: 6rem;
+}
+
+.kont-tel, .kont-mail {
+    margin-top: 3rem;
 }
 
 .kont-kde-img {
@@ -520,11 +524,10 @@ footer > p {
     text-shadow: var(--textshadow-black);
     font-size: clamp(1.5rem, 3.5vw, 5rem);
     margin-left: 3rem;
-    padding-top: 5rem;
+    padding-top: 2rem;
 }
 
 .konz-help-cont > ul {
-    padding-top: 2rem;
     padding-bottom: 5rem;
 }
 
@@ -573,7 +576,7 @@ footer > p {
 }
 
 .med-headline {
-    margin-top: 5rem;
+    margin-top: 2rem;
     font-size: clamp(1.5rem, 3.5vw, 5rem);
 }
 
@@ -583,7 +586,7 @@ footer > p {
 
 .med-lay-cont {
     /* gap: 5%; */
-    margin-top: 8rem;
+    margin-top: 3rem;
 }
 
 .med-p-cont {
@@ -605,11 +608,11 @@ footer > p {
 }
 
 .med-cont-1 {
-    min-height: 20rem;
+    min-height: 15rem;
 }
 
 .med-cont-2 {
-    min-height: 25rem;
+    min-height: 15rem;
 }
 
 .med-p-cont > img {
@@ -624,7 +627,6 @@ footer > p {
 }
 
 .med-next-sess {
-    margin-top: 7rem;
     font-size: clamp(1.2rem, 2vw, 3.5rem);
 }
 
@@ -634,7 +636,7 @@ hr {
 }
 
 .med-second-headline {
-    margin-top: 8rem;
+    margin-top: 3rem;
 }
 
 .med-footer {
@@ -644,9 +646,22 @@ hr {
 
 /* ----------Seminare---------- */
 
+.sem-main {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.sem-imgbg-cont {
+    margin-top: 7rem;
+    background-image: url(../img/flowers4.jpg);
+    /* background-image: url(../img/woman-blue.png); */
+    background-position: center;
+    background-size: cover;
+    height: clamp(15rem, 25vw, 30rem);
+}
 
 .sem-headline {
-    margin-top: 10rem;
+    margin-top: 2rem;
 }
 
 .sem-subheadline {
@@ -679,17 +694,38 @@ hr {
 .cla-main-real {
     min-height: calc(100vh - 9rem);
     margin-top: 7rem;
+    margin-left: 0;
+    margin-right: 0;
 }
 
-.cla-hadline-real {
-    padding-top: 2rem;
+.cla-footer-real {
+    margin-top: 5rem;
+}
+
+.cla-imgbg-cont {
+    margin-top: 7rem;
+    background-image: url(../img/flowers6.jpg);
+    /* background-image: url(../img/woman-blue.png); */
+    background-position: center;
+    background-size: cover;
+    height: clamp(15rem, 25vw, 30rem);
+}
+
+.cla-text-center {
+    text-align: center;
 }
 
 .cla-a-cont-real {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; */
     margin-top: 1rem;
+    display: inline-block;
+    text-align: left;
+}
+
+.cla-a-cont-real > p {
+    /* text-align: start; */
 }
 
 .cla-a-cont-real > a {
@@ -852,12 +888,17 @@ hr {
 @media (max-width: 1000px) {
     .kont-items-cont {
         display: grid;
+        justify-content: center;
         width: 100%;
     }
 
     .kont-items-cont > div {
-        width: 100%
+        width: 100%;
     };
+    
+    .kont-items-cont {
+        gap: 1rem;
+    }
     
 
     .margin-bottom6 {
@@ -867,6 +908,14 @@ hr {
     .kont-tel, .kont-mail {
         padding-top: 0;
         margin-bottom: 0;
+    }
+
+    .kont-doba {
+        margin-top: 0rem;
+    }
+    
+    .kont-tel, .kont-mail {
+        margin-top: 0rem;
     }
 
     .kont-tel > h5 {

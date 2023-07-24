@@ -540,7 +540,7 @@ footer > p {
 
 .konz-help-cont > ul > li::marker {
     content: '➢   ';
-    color: var(--grey);
+    /* color: var(--grey); */
 }
 
 

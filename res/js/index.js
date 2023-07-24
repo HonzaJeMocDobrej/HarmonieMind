@@ -31,7 +31,7 @@ const focus = (text, item, path, img) => {
 }
 
 focus(phone, content1, "tel:704721304", hoverPhone)
-focus(mail, content2, "mailto:testmail@harmoniemind.cz", hoverMail)
+focus(mail, content2, "mailto:konzultace@harmoniemind.cz", hoverMail)
 
 menu.onmouseover = () => {
     menu.style.cursor = "pointer"

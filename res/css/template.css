@@ -728,7 +728,7 @@ hr {
     /* text-align: start; */
 }
 
-.cla-a-cont-real > p > a {
+.cla-a-cont-real > p {
     margin-top: .5rem;
     font-size: clamp(1.2rem, 1.5vw, 3rem);
     font-family: var(--font-head);
@@ -737,7 +737,7 @@ hr {
     transition: .5s;
 }
 
-.cla-a-cont-real > p > a:hover {
+.cla-a-cont-real > p:hover {
     transform: scale(.95);
     color: var(--light-blue);
 }

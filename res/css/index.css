@@ -44,6 +44,12 @@ span {
     color: var(--light-grey);
 }
 
+#facebook {
+    /* filter: invert(44%) sepia(0%) saturate(1522%) hue-rotate(224deg) brightness(101%) contrast(85%); */
+    filter: invert(34%) sepia(15%) saturate(2261%) hue-rotate(182deg) brightness(91%) contrast(86%);  
+    transition: .5s;
+}
+
 /* ----------header---------- */
 
 header {

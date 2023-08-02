@@ -264,6 +264,10 @@ footer {
         align-items: center;
         z-index: 3;
     }
+
+    #facebook {
+        display: none;
+    }
 }
 
 @media (max-width: 550px) {

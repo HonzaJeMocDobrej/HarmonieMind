@@ -30,7 +30,6 @@ p {
     margin: 0;
     color: var(--grey);
     font-family: var(--font-head);
-    text-wrap: balance;
 }
 
 span {
@@ -292,7 +291,6 @@ footer > p {
 .onas-pdiv > p {
     text-align: justify;
     font-size: clamp(1.25rem, 1.5vw, 3rem);
-    text-wrap: balance;
 }
 
 .onas-pdiv-fchild {

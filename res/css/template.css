@@ -629,6 +629,7 @@ footer > p {
     text-align: justify;
     font-size: clamp(.75rem, 1.2vw, 1.7rem);
     margin-top: 1.5rem;
+    /* word-break: break-all; */
 }
 
 .med-next-sess {
@@ -656,6 +657,28 @@ hr {
     margin-right: 0;
 }
 
+.sem-main > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(.9rem, 1.8vw, 2.5rem);
+    color: var(--grey);
+    margin-top: 0;
+    font-weight: 700;
+}
+
+.sem-main > a::before {
+    content: url(../img/IcBaselineAdsClick.svg);
+    height: 100%;
+    filter: invert(43%) sepia(0%) saturate(56%) hue-rotate(138deg) brightness(103%) contrast(79%);
+    transition: .5s;
+    transform: translate(0%);
+}
+
+.sem-main > a:hover::before {
+    filter: invert(83%) sepia(12%) saturate(906%) hue-rotate(166deg) brightness(95%) contrast(94%);
+}
+
 .sem-imgbg-cont {
     margin-top: 7rem;
     background-image: url(../img/flowers4.jpg);
@@ -671,6 +694,7 @@ hr {
 
 .sem-subheadline {
     text-align: center;
+    margin-bottom: 0;
 }
 
 .sem-img {
@@ -683,6 +707,7 @@ hr {
     margin-right: 15%;
     font-size: clamp(0.9rem, 1.2vw, 2rem);
     text-align: center;
+    margin-top: 1.5rem;
 }
 
 .sem-footer {
@@ -762,6 +787,7 @@ hr {
     text-align: justify;
     margin-top: 1rem;
     font-size: clamp(.9rem, 1.2vw, 2rem);
+    word-break: break-all;
 }
 
 .cla-cont > ul {
@@ -787,7 +813,6 @@ hr {
 .cla-cont {
     margin-top: 4rem;
     min-height: 50rem;
-    background-color: var(--light-grey);
     max-width: 100%;
     box-shadow: 0px -2px 15px 16px rgba(0,0,0,0.1);
     padding-left: 5%;
@@ -839,6 +864,12 @@ hr {
     font-style: italic;
 }
 
+.cla-inv > p {
+    margin-top: .2rem;
+    max-width: 50rem;
+    text-align: justify;
+}
+
 .cla-inv {
     margin-top: 5rem;
     padding-bottom: 5rem;
@@ -887,6 +918,10 @@ hr {
         height: 100%;
         align-items: center;
         z-index: 3;
+    }
+
+    .med-p-cont > p {
+        word-break: break-all;
     }
 
     #facebook {
@@ -951,6 +986,16 @@ hr {
         margin-left: 1.5rem;
         margin-right: 2.5rem;
     }
+
+    .kont-img-cont {
+        /* display: block; */
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .kont-mdt-cont {
+        margin-top: 3rem;
+    }
 }
 
 @media (max-width: 700px) {
@@ -963,6 +1008,10 @@ hr {
         min-height: fit-content;
         margin-top: 3rem;
         width: 60%;
+    }
+
+    .med-p-cont > p {
+        word-break: normal;
     }
 
     .med-p-cont:nth-child(1) {
@@ -1022,9 +1071,5 @@ hr {
 
     /* ----------onas---------- */
 
-    .kont-img-cont {
-        /* display: block; */
-        flex-direction: column;
-        gap: 2rem;
-    }
+    
 }
